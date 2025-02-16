@@ -23,20 +23,47 @@ export function Hero() {
           <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
             {PROFILE_DATA.name}
           </h1>
-          <p className="text-muted-foreground md:text-xl leading-relaxed">
-            {PROFILE_DATA.title}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <Button asChild size="lg">
+          <div className="space-y-4">
+            <h2 className="text-2xl font-semibold text-primary/80">Software Engineer</h2>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              {PROFILE_DATA.title.split('. ').map((sentence, index) => (
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="block mb-2"
+                >
+                  {sentence}.
+                </motion.span>
+              ))}
+            </p>
+          </div>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+          >
+            <Button 
+              asChild 
+              size="lg"
+              className="bg-primary hover:bg-primary/90 transition-all duration-300"
+            >
               <a href={RESUME_URL} download>
                 <FileDown className="mr-2 h-5 w-5" />
                 Download Resume
               </a>
             </Button>
-            <Button variant="outline" size="lg" asChild>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              asChild
+              className="border-primary/20 hover:border-primary transition-all duration-300"
+            >
               <a href="#contact">Contact Me</a>
             </Button>
-          </div>
+          </motion.div>
         </div>
       </motion.div>
     </section>
