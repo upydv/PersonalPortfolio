@@ -55,6 +55,17 @@ export const profile = {
       screenshot: "" // Will be updated when screenshot is provided
     },
     {
+      title: "Street Dog Management System",
+      type: "C++, Project Planning",
+      date: "August 2022",
+      description: [
+        "Developed an interface to manage street dogs, including medical care and adoption tracking, improving organizational efficiency and animal welfare.",
+        "Implemented a system to record and monitor stray dogs' health status and adoptions, ensuring humane rescue and protection efforts."
+      ],
+      url: "https://github.com/upydv/street-dog-management", // Dummy link as requested
+      screenshot: "" // Will be updated when screenshot is provided
+    },
+    {
       title: "Glasstique",
       type: "Web Development",
       date: "January 2024",

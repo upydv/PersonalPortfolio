@@ -8,12 +8,16 @@ import { Contact } from "@/components/sections/contact";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
-      <Hero />
-      <Education />
-      <Projects />
-      <Skills />
-      <Certifications />
-      <Contact />
+      <div className="bg-gradient-to-b from-background to-primary/5">
+        <Hero />
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <Education />
+        <Projects />
+        <Skills />
+        <Certifications />
+        <Contact />
+      </div>
     </main>
   );
 }
