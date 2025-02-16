@@ -5,6 +5,7 @@ import { insertMessageSchema } from "@shared/schema";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
+import { Send, Mail, User } from "lucide-react";
 import {
   Form,
   FormControl,
@@ -56,13 +57,23 @@ export function Contact() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
+        className="px-4 md:px-8 lg:px-12"
       >
-        <h2 className="text-3xl font-bold tracking-tight mb-8">Contact Me</h2>
-        <Card className="max-w-2xl mx-auto">
-          <CardHeader>
-            <p className="text-muted-foreground">
-              Have a question or want to work together? Feel free to reach out!
-            </p>
+        <h2 className="text-3xl font-bold tracking-tight mb-8 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
+          Contact Me
+        </h2>
+        <Card className="max-w-2xl mx-auto hover:shadow-xl transition-all duration-300 backdrop-blur-sm border-primary/10">
+          <CardHeader className="space-y-2">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h3 className="text-2xl font-bold text-primary/80">Let's Connect</h3>
+              <p className="text-muted-foreground">
+                Have a question or want to work together? Feel free to reach out!
+              </p>
+            </motion.div>
           </CardHeader>
           <CardContent>
             <Form {...form}>
@@ -75,9 +86,16 @@ export function Contact() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Name</FormLabel>
+                      <FormLabel className="flex items-center gap-2">
+                        <User className="h-4 w-4" />
+                        Name
+                      </FormLabel>
                       <FormControl>
-                        <Input placeholder="John Doe" {...field} />
+                        <Input 
+                          placeholder="John Doe" 
+                          {...field} 
+                          className="transition-all duration-300 focus:ring-2 focus:ring-primary/20"
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -88,9 +106,16 @@ export function Contact() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel className="flex items-center gap-2">
+                        <Mail className="h-4 w-4" />
+                        Email
+                      </FormLabel>
                       <FormControl>
-                        <Input placeholder="john@example.com" {...field} />
+                        <Input 
+                          placeholder="john@example.com" 
+                          {...field} 
+                          className="transition-all duration-300 focus:ring-2 focus:ring-primary/20"
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -105,7 +130,7 @@ export function Contact() {
                       <FormControl>
                         <Textarea
                           placeholder="Your message here..."
-                          className="min-h-[100px]"
+                          className="min-h-[100px] transition-all duration-300 focus:ring-2 focus:ring-primary/20"
                           {...field}
                         />
                       </FormControl>
@@ -115,10 +140,17 @@ export function Contact() {
                 />
                 <Button
                   type="submit"
-                  className="w-full"
+                  className="w-full bg-primary hover:bg-primary/90 transition-all duration-300 hover:shadow-lg"
                   disabled={mutation.isPending}
                 >
-                  {mutation.isPending ? "Sending..." : "Send Message"}
+                  {mutation.isPending ? (
+                    "Sending..."
+                  ) : (
+                    <>
+                      <Send className="mr-2 h-4 w-4" />
+                      Send Message
+                    </>
+                  )}
                 </Button>
               </form>
             </Form>

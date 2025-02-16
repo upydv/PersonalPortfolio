@@ -12,8 +12,11 @@ export function Projects() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
+        className="px-4 md:px-8 lg:px-12"
       >
-        <h2 className="text-3xl font-bold tracking-tight mb-8">Projects</h2>
+        <h2 className="text-3xl font-bold tracking-tight mb-8 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
+          Projects
+        </h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {PROFILE_DATA.projects.map((project, index) => (
             <motion.div
@@ -22,8 +25,13 @@ export function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
+              whileHover={{ 
+                scale: 1.02,
+                rotateY: 5,
+                transition: { duration: 0.3 }
+              }}
             >
-              <Card className="h-full flex flex-col">
+              <Card className="h-full flex flex-col hover:shadow-xl transition-all duration-300 bg-card/50 backdrop-blur-sm border-primary/10">
                 {project.screenshot && (
                   <AspectRatio ratio={16 / 9} className="bg-muted">
                     <img
@@ -35,13 +43,13 @@ export function Projects() {
                 )}
                 <CardHeader>
                   <div className="flex items-center justify-between">
-                    <h3 className="text-xl font-bold">{project.title}</h3>
+                    <h3 className="text-xl font-bold text-primary/80">{project.title}</h3>
                     {project.url && (
                       <a
                         href={project.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary"
+                        className="text-muted-foreground hover:text-primary transition-colors duration-200"
                       >
                         <ExternalLink className="h-5 w-5" />
                       </a>
