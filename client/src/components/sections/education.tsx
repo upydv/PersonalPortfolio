@@ -10,8 +10,11 @@ export function Education() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
+        className="px-4 md:px-8 lg:px-12"
       >
-        <h2 className="text-3xl font-bold tracking-tight mb-8">Education</h2>
+        <h2 className="text-3xl font-bold tracking-tight mb-8 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
+          Education
+        </h2>
         <div className="grid gap-4">
           {PROFILE_DATA.education.map((edu, index) => (
             <motion.div
@@ -21,9 +24,9 @@ export function Education() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card>
+              <Card className="hover:shadow-lg transition-all duration-300">
                 <CardHeader>
-                  <h3 className="text-xl font-bold">{edu.school}</h3>
+                  <h3 className="text-xl font-bold text-primary/80">{edu.school}</h3>
                   <p className="text-sm text-muted-foreground">{edu.duration}</p>
                 </CardHeader>
                 <CardContent>
