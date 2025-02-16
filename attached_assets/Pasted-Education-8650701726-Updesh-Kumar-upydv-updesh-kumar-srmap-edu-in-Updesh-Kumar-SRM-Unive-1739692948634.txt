@@ -1,0 +1,72 @@
+Education
+ 8650701726 
+Updesh Kumar
+ upydv
+ updesh kumar@srmap.edu.in 
+Updesh Kumar 
+SRM University
+ Bachelor of Technology in Computer Science, CGPA: 8.05
+ Vidyagyan School
+ CBSE Class XII Board Percentage: 95.4%
+ Vidyagyan School
+ CBSE Class X Board Percentage: 94.8%
+ Internships
+ 2021– 2025
+ Guntur,Andhra Pradesh
+ 2020– 2021
+ Bulandshahr, Uttar Pradesh
+ 2018– 2019
+ Bulandshahr, Uttar Pradesh
+ SRM University
+ Research Intern
+ June 2023– August 2023
+ Guntur, Andhra Pradesh
+ • Spearheaded a pioneering project at SRM University AP, leading the development of a cutting-edge Hate Speech
+ Detection model that achieved an outstanding accuracy of 93.33% and revolutionized online content moderation
+ techniques.
+ • Managed the integration of cutting-edge machine learning techniques, enhancing hate speech detection capabilities and
+ f
+ ine-tuning the model for outstanding results, thereby advancing content moderation significantly.
+ • Authored a 100% report along with technical work like resource gathering, data processing, and recording experimental
+ analysis.
+ Projects
+ Unified KYC System | Software Engineering, Full Stack Development
+ February 2024
+ • Engineered a cutting-edge Unified KYC System by leveraging a full-stack development approach; digitized the
+ conventional KYC process for financial institutions and online retailers, leading to a 40% reduction in onboarding time
+ and a 25% increase in compliance accuracy.
+ • Created a secure database to store customer data, facilitating seamless KYC verification across multiple institutions by
+ generating a unique KYC ID (AASIN) for each individual, ensuring regulatory compliance, and significantly reducing
+ paperwork by up to 80%.
+ TastyFair | MERN-Stack
+ August 2024
+ • Developed a MERN stack e-commerce platform with features like user authentication, product management, and
+ dynamic cart functionality, ensuring seamless user experience.
+ • Integrated responsive front-end with bootstrap and built RESTful APIs for secure data handling and efficient backend
+ operations.
+ Street dog management system | C++, Project planning
+ August 2022
+ • Developed an interface to manage street dogs, including medical care and adoption tracking, improving organizational
+ efficiency and animal welfare.
+ • Implemented a system to record and monitor stray dogs’ health status and adoptions, ensuring humane rescue and
+ protection efforts.
+ Certifications and Achievements
+ Scholarship
+ • Received a 100% college scholarship covering tuition, accommodation, and food expenses.
+ Google AI Essentials
+ • Grade Achieved: 100%
+ Design & Implementation of Human-Computer Interfaces
+ • Score Achieved: 84%, Topper- Top 5%
+ Accenture UK Developer and Technology Virtual Experience Programme on Forage
+ 2021- 2024
+ Dec 2024
+ Nov 2024
+ April 2024
+ • Completed a Developer and Technology Job Simulation, mastering the Software Development Lifecycle and researching
+ emerging DevOps trends.
+ Technical Skills
+ Languages: C++, Python, SQL (MySQL), JavaScript, HTML/CSS
+ Frameworks: React, Node.js, Express.js
+ Developer Tools: Git, GitHub, VS Code, Cursor
+ Core Concepts: Data Structures, Algorithms, Object-Oriented Programming (OOPs), Software Development Life Cycle,
+ Database Management Systems (DBMS)
