@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { PROFILE_DATA } from "@/lib/constants";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
+import { ExternalLink } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export function Projects() {
   return (
@@ -12,7 +14,7 @@ export function Projects() {
         viewport={{ once: true }}
       >
         <h2 className="text-3xl font-bold tracking-tight mb-8">Projects</h2>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {PROFILE_DATA.projects.map((project, index) => (
             <motion.div
               key={index}
@@ -21,13 +23,34 @@ export function Projects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full">
+              <Card className="h-full flex flex-col">
+                {project.screenshot && (
+                  <AspectRatio ratio={16 / 9} className="bg-muted">
+                    <img
+                      src={project.screenshot}
+                      alt={`${project.title} preview`}
+                      className="object-cover rounded-t-lg"
+                    />
+                  </AspectRatio>
+                )}
                 <CardHeader>
-                  <h3 className="text-xl font-bold">{project.title}</h3>
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-xl font-bold">{project.title}</h3>
+                    {project.url && (
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-primary"
+                      >
+                        <ExternalLink className="h-5 w-5" />
+                      </a>
+                    )}
+                  </div>
                   <p className="text-sm text-muted-foreground">{project.type}</p>
                   <p className="text-sm text-muted-foreground">{project.date}</p>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-grow">
                   <ul className="list-disc list-inside space-y-2">
                     {project.description.map((desc, i) => (
                       <li key={i} className="text-sm">{desc}</li>

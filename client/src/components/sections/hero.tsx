@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { PROFILE_DATA, RESUME_URL } from "@/lib/constants";
 import { FileDown } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 export function Hero() {
   return (
@@ -12,10 +13,16 @@ export function Hero() {
         transition={{ duration: 0.5 }}
         className="flex flex-col items-center text-center space-y-8"
       >
+        {PROFILE_DATA.photoUrl && (
+          <Avatar className="h-32 w-32">
+            <AvatarImage src={PROFILE_DATA.photoUrl} alt={PROFILE_DATA.name} />
+            <AvatarFallback>UK</AvatarFallback>
+          </Avatar>
+        )}
         <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl">
           {PROFILE_DATA.name}
         </h1>
-        <p className="max-w-[700px] text-muted-foreground md:text-xl">
+        <p className="max-w-[800px] text-muted-foreground md:text-xl">
           {PROFILE_DATA.title}
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
